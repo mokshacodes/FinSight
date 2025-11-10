@@ -8,6 +8,12 @@ Provides:
 
 This module uses the application's db and analytics helpers and yfinance for data.
 """
+import sys
+from pathlib import Path
+sys.path.append(str((Path(__file__).parent / "src").resolve()))
+
+from app.services.analytics import compute_metrics_for_prices
+
 import argparse
 import sys
 from typing import List, Dict, Any, Optional
